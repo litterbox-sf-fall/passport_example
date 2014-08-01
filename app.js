@@ -36,10 +36,12 @@ app.use(flash());
 
 // prepare our serialize functions
 passport.serializeUser(function(user, done){
+  console.log("SERIALIZED JUST RAN!");
   done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done){
+  console.log("DESERIALIZED JUST RAN!");
   db.user.find({
       where: {
         id: id

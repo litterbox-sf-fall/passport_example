@@ -1,5 +1,4 @@
 <% include partials/header.ejs%>
-
 	
 	<%  if (!isAuthenticated){ %>
 		<br>
@@ -8,7 +7,7 @@
 		</div>
 	<%  } else {%>
 	
-	<h1>Hello, <%= user.username %>	- welcome to our website!</h1>
+	<h1>Hello, <%= user.username %> - welcome to our website!</h1>
 	
 	<a href="/logout" class = "btn btn-danger btn-lg">Log out here</a>
 
